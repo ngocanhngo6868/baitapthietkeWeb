@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 27 - Xóa dòng trong bảng</title>
+    <!-- Liên kết đến file CSS trong thư mục Styles -->
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>QUẢN LÝ GIỎ HÀNG</h2>
+        
+        <table id="cartTable" class="data-table">
+            <thead>
+                <tr>
+                    <th>Số lượng</th>
+                    <th>Đơn giá</th>
+                    <th>Tổng</th>
+                    <th>Chức năng</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>1.000.000</td>
+                    <td>2.000.000</td>
+                    <td><button class="btn-delete" onclick="deleteRow(this)">Xóa</button></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>500.000</td>
+                    <td>500.000</td>
+                    <td><button class="btn-delete" onclick="deleteRow(this)">Xóa</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Liên kết đến file JavaScript trong thư mục Scripts -->
+    <script src="Scripts/script.js"></script>
+</body>
+</html>

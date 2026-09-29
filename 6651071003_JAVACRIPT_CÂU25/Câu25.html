@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 25 - Tính tiền món ăn</title>
+    <!-- Liên kết đến file CSS trong thư mục Styles -->
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>THỰC ĐƠN QUÁN ĂN</h2>
+        
+        <form id="menuForm">
+            <div class="menu-sections">
+                <!-- Thức ăn (chọn nhiều) -->
+                <div class="menu-col">
+                    <h3>Thức ăn</h3>
+                    <label><input type="checkbox" name="food" value="Bún bò" data-price="20000"> Bún bò (20.000)</label>
+                    <label><input type="checkbox" name="food" value="Hủ tiếu" data-price="18000"> Hủ tiếu (18.000)</label>
+                    <label><input type="checkbox" name="food" value="Bánh canh" data-price="17000"> Bánh canh (17.000)</label>
+                    <label><input type="checkbox" name="food" value="Phở bò" data-price="19000"> Phở bò (19.000)</label>
+                    <label><input type="checkbox" name="food" value="Nuôi" data-price="15000"> Nuôi (15.000)</label>
+                    <label><input type="checkbox" name="food" value="Bánh mì thịt" data-price="12000"> Bánh mì thịt (12.000)</label>
+                    <label><input type="checkbox" name="food" value="Bánh cuốn" data-price="15000"> Bánh cuốn (15.000)</label>
+                </div>
+
+                <!-- Nước uống (chọn nhiều) -->
+                <div class="menu-col">
+                    <h3>Nước uống</h3>
+                    <label><input type="checkbox" name="drink" value="Cà phê đá" data-price="12000"> Cà phê đá (12.000)</label>
+                    <label><input type="checkbox" name="drink" value="Cà phê sữa đá" data-price="15000"> Cà phê sữa (15.000)</label>
+                    <label><input type="checkbox" name="drink" value="Chanh dây" data-price="13000"> Chanh dây (13.000)</label>
+                    <label><input type="checkbox" name="drink" value="Chanh muối" data-price="12000"> Chanh muối (12.000)</label>
+                    <label><input type="checkbox" name="drink" value="Xí muội" data-price="14000"> Xí muội (14.000)</label>
+                    <label><input type="checkbox" name="drink" value="Sữa tươi" data-price="13000"> Sữa tươi (13.000)</label>
+                    <label><input type="checkbox" name="drink" value="Cam vắt" data-price="17000"> Cam vắt (17.000)</label>
+                </div>
+            </div>
+
+            <!-- Thời điểm -->
+            <div class="time-section">
+                <strong>Thời điểm:</strong>
+                <label><input type="radio" name="time" value="day" checked> Ban ngày</label>
+                <label><input type="radio" name="time" value="night"> Ban đêm (tăng 10%)[cite: 3]</label>
+            </div>
+
+            <div class="btn-container">
+                <button type="button" onclick="tinhTien()">Tính tiền</button>
+            </div>
+        </form>
+
+        <!-- Phần hiển thị kết quả -->
+        <div class="result-section">
+            <h3>Các món đã dùng</h3>
+            <ul id="selectedItemsList"></ul>
+            <div id="totalAmount"></div>
+        </div>
+    </div>
+
+    <!-- Liên kết đến file JavaScript trong thư mục Scripts -->
+    <script src="Scripts/script.js"></script>
+</body>
+</html>

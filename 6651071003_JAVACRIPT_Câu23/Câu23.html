@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 23 - Tính tiền lương</title>
+    <!-- Liên kết đến file CSS trong thư mục Styles -->
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Bài tập JavaScript - Câu 23</h2>
+        
+        <form>
+            <table class="salary-table">
+                <tr>
+                    <td>Lương</td>
+                    <td><input type="number" id="luong" value="1000000"></td>
+                </tr>
+                <tr>
+                    <td>Hệ số lương</td>
+                    <td><input type="number" step="0.1" id="heSoLuong" value="3.2"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="text-center">
+                        <!-- Nút tính lương tháng -->
+                        <input type="button" value="Tính lương tháng" onclick="tinhLuong()">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Lương tháng</td>
+                    <td><input type="text" id="luongThang" readonly></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <!-- Liên kết đến file JavaScript trong thư mục Scripts -->
+    <script src="Scripts/script.js"></script>
+</body>
+</html>
