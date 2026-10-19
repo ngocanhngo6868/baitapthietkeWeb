@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">  
+<title>D CODE SHOW - Câu 12</title>
+<!-- Đường dẫn file CSS đã được trỏ vào thư mục Styles theo quy định -->
+<link rel="stylesheet" href="Styles/bootstrap.min.css">
+<link rel="stylesheet" href="Styles/style.css">
+<style>
+    /* CSS ẩn mặc định các khung nhập thông tin */
+    .passport-box {
+        display: none;
+        margin-top: 8px;
+    }
+</style>
+</head>
+<body>
+<div class="container mt-4">
+    <h4>Checkbox Div Hide Show</h4>
+
+    <div class="checkbox-card mb-3 p-3 border rounded bg-light">
+        <label for="">Do You have Passport</label>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" class="checkme" id="chkPassport">Yes
+            </label>
+        </div>
+        <div class="passport-box" id="boxPassport">
+            <input type="text" placeholder="Enter Passport Number" class="form-control">
+        </div>
+        <div class="apply-box mt-2">
+            <a href="">Apply For Passport</a>
+        </div>
+    </div>
+    <br>
+    <div class="checkbox-card p-3 border rounded bg-light">
+        <label for="">Do You have Credit Card</label>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" class="checkme" id="chkCredit">Yes
+            </label>
+        </div>
+        <div class="passport-box" id="boxCredit">
+            <input type="text" placeholder="Enter Credit Card Number" class="form-control">
+        </div>
+        <div class="apply-box mt-2">
+            <a href="">Apply For Credit Card</a>
+        </div>
+    </div>
+</div>
+
+<!-- Đường dẫn file jQuery đã được trỏ vào thư mục Scripts theo quy định -->
+<script src="Scripts/jquery-latest.min.js"></script>
+
+<!-- Script sử dụng jQuery để xử lý sự kiện hiện textbox khi chọn Yes[cite: 8] -->
+<script>
+    $(document).ready(function() {
+        // Xử lý phần Passport
+        $('#chkPassport').on('change', function() {
+            if ($(this).is(':checked')) {
+                $('#boxPassport').slideDown(200);
+            } else {
+                $('#boxPassport').slideUp(200);
+            }
+        });
+
+        // Xử lý phần Credit Card
+        $('#chkCredit').on('change', function() {
+            if ($(this).is(':checked')) {
+                $('#boxCredit').slideDown(200);
+            } else {
+                $('#boxCredit').slideUp(200);
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
